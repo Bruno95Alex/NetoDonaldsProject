@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netodonalds</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <hr>
+    <header>
+        <img width="100px" src="img/logo.png" alt="">
+        <h1>Bem vindos!</h1>
+        <div class="openHistory"><button onclick="getAllHistory()">Histórico de compras</button></div>
+    </header>
+    <hr>
+
+<!-- modal historico de compras-->
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Histórico de compras</h2>
+            <button class="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+                <div style="margin-bottom: 10px;">
+                CPF:
+                <input type="number" id="cpfFilter" placeholder="Digite o CPF">
+                <button onclick="filterHistoryByCpf()">Buscar<hr></button>
+                </div>
+                <div class="history-list"> </div>
+        </div>
+    </div>
+
+    <div class="menu-container">
+        <div class="food-container">
+            <h2>Escolha o seu lanche:
+            <input onchange="getFood(1)" type="radio" id="tapioca" name="food" checked> Tapioca
+            <input onchange="getFood(2)" type="radio" id="cuzcuz" name="food"> Cuzcuz
+            </h2>
+        </div>
+
+        <!-- <div class="buyer-container">
+            CPF do comprador: <input type="number" id="cpf" placeholder="Informe seu CPF">
+        </div> -->
+    </div>
+<hr>
+    <div class="body-container">
+
+        <div class="fillings-container">
+            <h2>Escolha o seu recheio</h2><hr>
+            <div class="fillings">
+                <!-- <div> <input type="checkbox"> Queijo (R$ 1.50)</div>
+                <div> <input type="checkbox"> Presunto (R$ 0.50)</div>
+                <div> <input type="checkbox"> Nutella (R$ 5.50)</div> -->
+            </div><hr>
+        </div>
+
+        <div class="price-container">
+            <h2>Preço Total: R$ <span id="price"></span></h2>
+            <div class="selectFillings"></div>
+            <hr><button class="buyFood" onclick="confirmPayment()">Comprar<hr></button><hr>
+        </div>
+    </div>
+    
+    <footer><hr><h3>Te alimentando bem!</h3><hr></footer>
+<hr>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
