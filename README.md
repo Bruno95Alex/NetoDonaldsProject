@@ -27,6 +27,7 @@ https://sweetalert2.github.io/
 - [] Responsividade da tela;
 - [] Aumentar a quantidade de comidas e recheios;
 - [] Melhorar o design;
+- [] Melhorar o README;
 
 ## Contatos
 
